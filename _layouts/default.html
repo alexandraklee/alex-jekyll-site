@@ -2,7 +2,7 @@
 
 <html>
    <head> 
-       <title>Diamond Tours Bali</title>
+       <title>{{page.title}}</title>
        <!-- CSS stylesheet -->
        <link rel="stylesheet" href="/styles/style.css">
         <!-- Gridlex stylesheet -->
@@ -12,8 +12,8 @@
    </head>
    
    <body>
-       <header class="grid-noGutter center">
-           <nav class="col-4-middle right">
+       <header class="grid-noGutter-center center">
+           <nav class="col-middle">
                <a href="#about" class="navlink">
                    About Us
                 </a>
@@ -21,13 +21,13 @@
                     Cars &amp; Chauffers
                 </a>
            </nav>
-           <div class="col-3-middle center">
+           <div class="col-middle center">
                <h2>
-                   Diamond Tours Bali
+                   <a href="/index.html"> &#9830; </a>
                </h2>
            </div>
-           <nav class="col-4-middle center">
-               <a href="#" class="navlink">
+           <nav class="col-middle center">
+               <a href="/tours" class="navlink">
                     Tours
                </a>
                <a href="#contact" class="navlink">
@@ -38,19 +38,21 @@
 
        <!-- Banner -->
        <section class="grid-center-noGutter centerbanner">
-        <div class="col-6_sm-12-middle centered">
-           <h1>
-               Diamond Tours Bali
-            </h1>
-           <h2>
-               Transport  <span style="color:#beff9f"> &#9830; </span> Transfers <span style="color:#beff9f"> &#9830; </span> Tours
-            </h2>
+        <div class="col-middle centered">
+           <div class="centered banner-text">
+                <h1>
+                Diamond Tours Bali
+                </h1>
+                <h2>
+                Transport  <span style="color:#beff9f"> &#9830; </span> Transfers <span style="color:#beff9f"> &#9830; </span> Tours
+                </h2>
+            </div>
         </div>
        </section>
 
        <!-- page content -->
        {{content}}
-       
+
          <!-- Footer -->
     <footer class="grid">
         <div class="col-5_sm-12">

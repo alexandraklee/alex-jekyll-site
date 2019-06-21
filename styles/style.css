@@ -6,6 +6,7 @@
 }
 
 .center, .right {
+    align-content: center;
     text-align: center;
     margin: 0;
 }
@@ -23,22 +24,41 @@
     background-position: center;
     background-attachment: fixed;
     margin: 1rem 0;
-    min-height: 70vh;
+    min-height: 50vh;
     display: flex;
 }
 
 .centered {
-        margin: 3rem;
-        text-align: center;
-        align-self: center;
-        max-width: 50%;
-        color: #FFFFFF;
-        background-color: #00000070;
-        border-radius: 2rem;
+    text-align: center;
+}
+
+.banner-text {
+    padding: 1rem 3rem;
+    align-self: center;
+    color: #FFFFFF;
+    background-color: #00000070;
+    border-radius: 0.5rem;
+}
+
+.airportimage {
+    background-image: url("https://images.unsplash.com/photo-1430402393301-f3b159a7a65a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80");
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height:10rem;
+
+}
+
+.dayimage {
+    background-image: url("https://images.unsplash.com/photo-1531060390976-9381603509be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    min-height: 10rem;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 1rem;
     line-height: 1.2;
@@ -56,7 +76,7 @@ h2 {
 }
 
 section, footer {
-    padding: 0 5rem;
+    padding: 0 3rem;
 }
 
 .dark {
@@ -89,7 +109,9 @@ p, li {
     margin-bottom: 0.5rem;
 }
 
-
+.padded {
+    padding: 1rem 0;
+}
 
 .button {
     display: inline-block;
@@ -113,17 +135,18 @@ p, li {
 
 @media (max-width: 500px) {
     .centerbanner {
-        max-height: 50vh;
-        min-height: 50vh;
+        max-height: 30vh;
+        min-height: 30vh;
     }
-    .carimage {
+    .carimage, .airportimage, .dayimage {
         margin: 1rem 0;
     }
 
-    * {
+    section {
         padding: 0;
         margin: 0;
     }
+    
     
 }
 
@@ -156,7 +179,7 @@ cars.carspec {
     content: '✓  ';
 }
 
-.pad {
+.pad, .bookpad {
     @media (max-width:48em) {
         flex-basis: 100%;
         max-width: 100%;
@@ -167,7 +190,11 @@ cars.carspec {
     padding: 3rem 0;
 }
 
-a:link {
+.bookpad {
+    padding: 2rem 1rem;
+}
+
+a:link, a:visited {
     text-decoration: none;
     color: rgb(0, 128, 17);
     font-weight: 600;
@@ -200,7 +227,7 @@ footer {
 
 footer a:link {
     text-decoration: none;
-    color: #d3ffd9;
+    color: #dcffe1;
     font-weight: 100;
 }
 
@@ -212,4 +239,8 @@ footer a:hover {
 
 html {
     scroll-behavior: smooth;
+}
+
+ul {
+    margin-left: 1.5rem;
 }
