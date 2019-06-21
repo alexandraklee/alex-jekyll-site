@@ -8,7 +8,7 @@
 .center, .right {
     align-content: center;
     text-align: center;
-    margin: 0;
+    margin: 0 0.5rem;
 }
 
 .right {
@@ -102,7 +102,7 @@ h5 {
     color: #464646;
 }
 
-p, li {
+p, li, .text {
     color: #5D5D5D;
     font-size: 1rem;
     line-height: 1.5;
@@ -147,7 +147,7 @@ p, li {
         margin: 0;
     }
     
-    
+
 }
 
 cars.carspec {
