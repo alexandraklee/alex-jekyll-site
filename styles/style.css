@@ -123,6 +123,16 @@ p, li, .text {
     margin-top: 0.5rem;
 }
 
+.bigbooknow {
+    display:inline-block;
+    text-decoration:none;
+    color: #476B2E;
+    border: 2px solid;
+    padding: 0 5rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
 .carimage {
    background-image: url("https://images.unsplash.com/photo-1516752356939-6fdc885e9ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80");
    background-size: cover;

@@ -1,8 +1,77 @@
 ---
 layout: default
 title: Tours
+things:
+- name: thing 1
+  bits:
+  - name: bit 1 in thing 1
+    descrption: a bit oin a thing
+  - name: bit 2 in thing 1
+    descrption: a bit oin a thing
+- name: thing 2
+  bits:
+  - name: bit 1 in thing 2
+    descrption: a bit oin a thing
+  - name: bit 2 in thing 2
+    descrption: a bit oin a thing
+  - name: bit 3 in thing 2
+    descrption: a bit oin a thing
+
+tours:
+- name: Full Day in Ubud
+  locations:
+  - name: Barong Keris Dance
+    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  - name: Batuan Temple
+    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  - name: Batuan Temple
+    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+  - name: Batuan Temple
+    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+
+
+
 ---
-<section class="grid light">
+<section class="light">
     <div class="grid-noGutter lightblock">
-     </div>   
+            {% for item in page.tour %}
+      <div class="col-3_sm-6">
+        <div class="bg-image" style="background-image:url('/pencils.jpg');"> </div>
+        <h2> {{item.tourname}} </h2>
+        <p> {{item.loc1}} </p>
+    </div>
+        {% endfor %}
+    {% for thing in page.things %}
+        <p>
+            {{ thing.name }}
+        </p>
+        <ul>
+            {% for bit in thing.bits %}
+                <li>
+                    {{ bit.name }} - {{ bit.descrption }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</section>
+
+<!-- Full day tour Ubud -->
+<section class="light">
+    <div class="grid-noGutter lightblock">
+       {% for tour in page.tours %}
+        <div class="col-4_sm-6">
+            <p>
+                {{ tour.name }}
+            </p>
+            <ul>
+                {% for location in tour.locations %}
+                    <li>
+                        {{ location.name }} <br> {{ location.description }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+       {% endfor %} 
+    </div>
 </section>

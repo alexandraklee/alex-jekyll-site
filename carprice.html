@@ -1,51 +1,72 @@
 ---
 layout: default
 title: Pricing
+
+air-transf:
+- name: Kuta / Nusa Dua
+  price: 250
+- name: Jimbaran / Seminyak
+  price: 300
+- name: Canggu
+  price: 350
+- name: Ubud
+  price: 450
+
+daydrive:
+- name: Half Day
+  price: 450
+- name: Full Day
+  price: 650
+- name: Full Day East Bali
+  price: 800
+- name: Full Day North Bali
+  price: 900
 ---
 
 <section class="light">
-    <div class="lightblock">
-        <!-- Transfer Prices -->
-        <div class="grid mob-flip">
-            <div class="col-7_sm-12 airportimage">
-                <!-- Airport image -->
-            </div>
-            <div class="col-5_sm-12-middle">
-                <h4>Airport Transfers</h4>
-                <p>Airport to:</p>
-                <div class="grid-noGutter">
-                    <div class="col-7_sm-12 text">Kuta/Nusa Dua</div>
-                    <div class="col-5_sm-12 text">Rp 250 <span style="font-size: 0.8rem">000</span></div>
-                    <div class="col-7_sm-12 text">Jimbaran/Seminyak</div>
-                    <div class="col-5_sm-12 text">Rp 300 <span style="font-size: 0.8rem">000</span></div>
-                    <div class="col-7_sm-12 text">Canggu</div>
-                    <div class="col-5_sm-12 text">Rp 350 <span style="font-size: 0.8rem">000</span></div>
-                    <div class="col-7_sm-12 text">Ubud</div>
-                    <div class="col-5_sm-12 text">Rp 450 <span style="font-size: 0.8rem">000</span></div>
-                </div>
-            </div>
+  <div class="lightblock">
+    <!-- Transfer Prices -->
+    <div class="grid mob-flip">
+      <div class="col-7_sm-12 airportimage">
+        <!-- Airport image -->
+      </div>
+      <!-- Airport transfers price -->
+      <div class="col-5_sm-12-middle">
+        <h4>Airport Transfers</h4>
+        <p>Airport to:</p>
+        <div class="grid-noGutter">
+          {% for item in page.air-transf %}
+          <div class="col-6_sm-12 text">
+            <p> {{item.name}} </p>
+          </div>
+          <div class="col-6_sm-12 text">
+            <p>Rp {{item.price}} <span style="font-size: 0.8rem">000</span></p>
+          </div>
+          {% endfor %}
         </div>
-        <div class="grid mob-flip padded">
-            <div class="col-4_sm-12-middle">
-                <h4>Half/Full Day</h4>
-                <ul>
-                    <li>
-                        Half Day - Rp 450 <span style="font-size: 0.8rem">000</span>
-                    </li>
-                    <li>
-                        Full Day - Rp 650 <span style="font-size: 0.8rem">000</span>
-                    </li>
-                    <li>
-                        Full Day East Bali -  Rp 800 <span style="font-size: 0.8rem">000</span>
-                    </li>
-                    <li>
-                        Full Day North Bali -  Rp 900 <span style="font-size: 0.8rem">000</span>
-                    </li>
-                </ul>
+
+      </div>
+    </div>
+
+    <div class="grid mob-flip padded">
+    <!-- Airport transfers price -->
+    <div class="col-5_sm-12-middle">
+        <h4>Half/Full Day</h4>
+        <div class="grid-noGutter">
+            {% for item in page.daydrive %}
+            <div class="col-6_sm-12 text">
+                <p> {{item.name}} </p>
             </div>
-            <div class="col-8_sm-12 dayimage">
-                <!-- Half/full day car image -->
+            <div class="col-6_sm-12 text">
+                <p> Rp {{item.price}} <span style="font-size: 0.8rem">000</span> </p>
             </div>
+            {% endfor %}
         </div>
     </div>
+      <div class="col-7_sm-12 dayimage">
+        <!-- Half/full day car image -->
+      </div>
+  </div>
+
+  <a class="button bigbooknow" href="/contact"> Book Now </a>
 </section>
