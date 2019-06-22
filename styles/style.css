@@ -146,7 +146,11 @@ p, li, .text {
         padding: 0;
         margin: 0;
     }
-    
+
+    .pad, .bookpad {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 
 }
 
@@ -177,13 +181,6 @@ cars.carspec {
 .nobullets, .nobullets li:before {
     list-style: none;
     content: '✓  ';
-}
-
-.pad, .bookpad {
-    @media (max-width:48em) {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
 }
 
 .pad {
