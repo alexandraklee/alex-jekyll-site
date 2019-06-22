@@ -19,16 +19,27 @@ things:
 
 tours:
 - name: Full Day in Ubud
+  blocking: light
+  block: lightblock
+  image: 
   locations:
   - name: Barong Keris Dance
     description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
   - name: Batuan Temple
     description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-  - name: Batuan Temple
+  - name: Monkey Forest
     description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-  - name: Batuan Temple
+  - name: Rice Terrace Tegalalang
     description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-
+  - name: Tegenungan Waterfall
+    description: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+- name: Tanah Lot Full Day Tour
+  blocking: dark
+  block: darkblock
+  image: 
+  locations:
+   - name:
+     description:
 
 
 
@@ -57,13 +68,16 @@ tours:
 </section>
 
 <!-- Full day tour Ubud -->
-<section class="light">
-    <div class="grid-noGutter lightblock">
+<section class="{{tours.blocking}}">
+    <div class="grid-noGutter {{tours.block}} ">
        {% for tour in page.tours %}
-        <div class="col-4_sm-6">
-            <p>
+            <h2>
                 {{ tour.name }}
-            </p>
+            </h2>
+        <div class="col-6_sm-12">
+            <!-- Tour Big image -->
+        </div>
+        <div class="col-6_sm-12-middle">
             <ul>
                 {% for location in tour.locations %}
                     <li>
